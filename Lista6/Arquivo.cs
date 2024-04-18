@@ -86,24 +86,22 @@ namespace Lista6
                 Console.WriteLine("2. Executar impressao");
                 Console.WriteLine("3. Exibir fila de impressao");
                 Console.WriteLine("4. Sair");
-
-                Console.Write("Escolha uma opção: ");
                 int opcao = Convert.ToInt32(Console.ReadLine());
 
                 switch (opcao)
                 {
                     case 1:
-                        Console.Write("Digite o nome do arquivo: ");
+                        Console.WriteLine("Digite o nome do arquivo:");
                         string nome = Console.ReadLine();
-                        Console.Write("Digite a quantidade de paginas: ");
+                        Console.WriteLine("Digite a quantidade de paginas:");
                         int paginas = Convert.ToInt32(Console.ReadLine());
                         filaDeImpressao.Enfileirar(new Arquivo(nome, paginas));
                         break;
                     case 2:
                         Arquivo arquivo = filaDeImpressao.Desenfileirar();
-                        if (arquivo != null)
+                        if (arquivo == null)
                         {
-                            Console.WriteLine($"O arquivo {arquivo.Nome} foi impresso.");
+                            Console.WriteLine($"O arquivo {arquivo.Nome} NAO foi impresso.");
                         }
 
                         break;
@@ -111,7 +109,7 @@ namespace Lista6
                         filaDeImpressao.Exibir();
                         break;
                     case 4:
-                        Console.WriteLine("O programa será encerrado.");
+                        Console.WriteLine("O programa sera encerrado.");
                         continuar = false;
                         break;
                     default:

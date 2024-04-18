@@ -13,7 +13,7 @@ namespace Lista6
             // ListaProduto.Exe();
             // Test.Verificar(Aviao.Exe);
             // Aviao.Exe();
-            Test.Verificar(Fila.Exe);
+            // Test.Verificar(Fila.Exe);
         }
     }
 }
